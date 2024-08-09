@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .search-box {
+            margin: 20px 0;
+        }
+        .search-box input[type="text"] {
+            width: 500px;
+            height: 40px;
+            padding: 0 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 24px;
+            font-size: 16px;
+        }
+        .search-box input[type="submit"] {
+            height: 40px;
+            border: none;
+            background-color: #f8f9fa;
+            color: #1a73e8;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 24px;
+            margin-left: 8px;
+        }
+        .search-box input[type="submit"]:hover {
+            background-color: #f1f1f1;
+        }
+        .footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        </div>
+        <div class="search-box">
+            <form action="https://www.google.com/search" method="get">
+                <input type="text" name="q" placeholder="Search Google">
+                <input type="submit" value="Google Search">
+            </form>
+        </div>
+        <div class="footer">
+            <p>Google Clone</p>
+        </div>
+    </div>
+</body>
+</html>

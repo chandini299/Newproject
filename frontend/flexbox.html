@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Flexbox Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            max-width: 700px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .flex-item {
+            flex: 1;
+            margin: 5px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .item-1 { background-color: #FF5722; } /* Red-Orange */
+        .item-2 { background-color: #3F51B5; } /* Indigo */
+        .item-3 { background-color: #009688; } /* Teal */
+        .item-4 { background-color: #FFC107; } /* Amber */
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item item-1">Item 1</div>
+        <div class="flex-item item-2">Item 2</div>
+        <div class="flex-item item-3">Item 3</div>
+        <div class="flex-item item-4">Item 4</div>
+    </div>
+</body>
+</html>

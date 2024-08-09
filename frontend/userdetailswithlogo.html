@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center; /* Center-align text and logo */
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px; /* Adjust the width as needed */
+            height: auto;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #4045d1;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #3038c0;
+        }
+        .form-group input[type="reset"] {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group input[type="reset"]:hover {
+            background-color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- Replace the src attribute with your company's logo URL -->
+            <img src="data:image/jpeg;base64,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">
+        </div>
+        <h2>Register</h2>
+        <form action="/submit_registration" method="post">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone_number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+            <div class="form-group">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

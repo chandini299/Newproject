@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiaglam</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #59cfd7;
+            padding-bottom: 60px; /* Add padding for footer */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart i {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
+        .hero {
+            background: url('images/hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a0aa4;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .section {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .section img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1700px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin: 0 20px;
+            flex: 1;
+            min-width: 50px;
+        }
+
+        .footer-section h3 {
+            margin-top: 0;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section a {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home"><img src="data:image/png;base64,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" alt="ShopLogo" style="height: 40px;"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#women">Women</a></li>
+                <li><a href="#indian wear">Indian wear</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#more">More</a></li>
+            </ul>
+            <div class="cart">
+                <a href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to India glam<hr></h1>
+    </section>
+
+    <section id="women" class="section">
+        <h1>Women’s Collection</h1>
+        <p>Explore our stylish and diverse range of women’s clothing and accessories.</p>
+        <div class="prizes">
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPiksjnrI8GoXHNd9sl8e6L5gvrxmgkGKAg&s" alt="Bridal frocks">
+                <div class="prize-info">
+                    <h2>Bridal frocks</h2>
+                    <p>1500</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjfymW7aQTOryz3UNumpnWaFQsACze426R5w&s" alt="Section">
+                <div class="prize-info">
+                    <h2>Section</h2>
+                    <p>1000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://images.squarespace-cdn.com/content/v1/5638f265e4b0810a8e79b218/1683134331872-1NJZ884VZY4HI9D12T0F/final2.jpg" alt="Christian Bridal">
+                <div class="prize-info">
+                    <h2>Christian Bridal</h2>
+                    <p>3000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXoZC3wEZEvLdHCsqCDGOCZYLzMgshtJ0E58p5c7RN5jpJGSFp2-D39Y6YC8Zl7S9QMQ&usqp=CAU" alt="Bridal gowns">
+                <div class="prize-info">
+                    <h2>Bridal gowns</h2>
+                    <p>2000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://i.pinimg.com/736x/bb/1d/ac/bb1dac1ebffbc84ff54f5f37d794a004.jpg" alt="Party wear dress">
+                <div class="prize-info">
+                    <h2>Party wear dress</h2>
+                    <p>3000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNJe4w_QG2gxVpqNPn5HA4KQcKRDP6TTkDYY1IqMaMS3EK7_FCYbnt107MM5WC7uB3_0k&usqp=CAU" alt="Custom designing">
+                <div class="prize-info">
+                    <h2>Custom designing</h2>
+                    <p>5000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSG8CD8QSP8bc_OZ1BMgBYi4csoLhE8JdPqrpIHptsOQHmgGYMjbP6zyn1gjbCJiKrUqY&usqp=CAU" alt="Heavy party dress">
+                <div class="prize-info">
+                    <h2>Heavy party dress</h2>
+                    <p>6000</p>
+                </div>
+    </section>
+tr
+    <section id="indian wear" class="section">
+        <h1>Indian wear</h1>
+        <p>Discover our latest collection of Indian wear apparel and accessories.</p>
+        <!-- Add more content and images related to the Men's section here -->
+    </section>
+
+    <section id="about" class="section">
+        <h1>About Us</h1>
+        <p>Welcome to IndaGlam—where sophistication meets style. We are a premier fashion destination dedicated to curating the finest trends in clothing and accessories for the modern individual.
+             <br>Our mission is to bring you high-quality, elegant, and unique fashion pieces that enhance your personal style and confidence.<br><br>
+
+            At IndaGlam, we believe in the power of fashion to transform lives. Our team of experienced designers and fashion experts meticulously selects each item to ensure it meets our high standards of quality and trendsetting design. <br>
+            Whether you’re looking for chic everyday wear, statement pieces, or exclusive collections, we have something to make every occasion special.<br><br>
+            
+            Join us on a journey through fashion excellence and discover the latest trends, timeless classics, and unparalleled customer service that make IndaGlam the ultimate destination for fashion enthusiasts.
+            
+            </p>
+       
+    </section>
+
+    <section id="more" class="section">
+        <h2>Our Amazing Prizes</h2>
+        <div>
+            <img src="images/prize1.jpg" alt="Prize 1">
+            <img src="images/prize2.jpg" alt="Prize 2">
+            <img src="images/prize3.jpg" alt="Prize 3">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><a href="mailto:info@shoplogo.com">info@indiaglam.com</a></p>
+                <p>91+ 9876543210</p>
+            </div>
+            <div class="footer-section">
+                <h3>Complex</h3>
+                <p>1234 Shopping St.</p>
+                <p>Visakhapatnam, Andhra pradesh, 530017</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navigation with Prizes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .logo {
+            font-size: 24px;
+        }
+        .logo img {
+            height: 40px; /* Adjust based on your logo size */
+        }
+        .nav {
+            display: flex;
+            gap: 20px; /* Space between navigation items */
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav a:hover {
+            background-color: #575757;
+        }
+        .cart {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .cart i {
+            margin-left: 10px;
+        }
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .prizes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .prize {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 200px;
+        }
+        .prize img {
+            width: 100%;
+            height: auto;
+        }
+        .prize-info {
+            padding: 10px;
+            text-align: center;
+        }
+        .prize-info h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .prize-info p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="https://example.com/logo.png" alt="Logo"> <!-- Replace with your logo image URL -->
+        </div>
+        <nav class="nav">
+            <a href="#">About</a>
+            <a href="#">All Collections</a>
+            <a href="#">Contact</a>
+            <a href="#">Store</a>
+        </nav>
+        <div class="cart">
+            <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+        </div>
+    </header>
+    <div class="main-content">
+        <h1>Classy Fashion Boutique</h1>
+        <div class="prizes">
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPiksjnrI8GoXHNd9sl8e6L5gvrxmgkGKAg&s" alt="Bridal frocks">
+                <div class="prize-info">
+                    <h2>Bridal frocks</h2>
+                    <p>1500</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjfymW7aQTOryz3UNumpnWaFQsACze426R5w&s" alt="Section">
+                <div class="prize-info">
+                    <h2>Section</h2>
+                    <p>1000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://images.squarespace-cdn.com/content/v1/5638f265e4b0810a8e79b218/1683134331872-1NJZ884VZY4HI9D12T0F/final2.jpg" alt="Christian Bridal">
+                <div class="prize-info">
+                    <h2>Christian Bridal</h2>
+                    <p>3000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXoZC3wEZEvLdHCsqCDGOCZYLzMgshtJ0E58p5c7RN5jpJGSFp2-D39Y6YC8Zl7S9QMQ&usqp=CAU" alt="Bridal gowns">
+                <div class="prize-info">
+                    <h2>Bridal gowns</h2>
+                    <p>2000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://i.pinimg.com/736x/bb/1d/ac/bb1dac1ebffbc84ff54f5f37d794a004.jpg" alt="Party wear dress">
+                <div class="prize-info">
+                    <h2>Party wear dress</h2>
+                    <p>3000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNJe4w_QG2gxVpqNPn5HA4KQcKRDP6TTkDYY1IqMaMS3EK7_FCYbnt107MM5WC7uB3_0k&usqp=CAU" alt="Custom designing">
+                <div class="prize-info">
+                    <h2>Custom designing</h2>
+                    <p>5000</p>
+                </div>
+            </div>
+            <div class="prize">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSG8CD8QSP8bc_OZ1BMgBYi4csoLhE8JdPqrpIHptsOQHmgGYMjbP6zyn1gjbCJiKrUqY&usqp=CAU" alt="Heavy party dress">
+                <div class="prize-info">
+                    <h2>Heavy party dress</h2>
+                    <p>6000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
